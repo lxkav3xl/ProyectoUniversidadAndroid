@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appMoviles_Sabado.Views.AboutPage"
+             xmlns:vm="clr-namespace:appMoviles_Sabado.ViewModels"
+             Title="BIENVENIDO">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="https://rentacarexpress.co/sites/default/files/2022-08/fdc939c0-59b3-49fc-b4f5-80a5650f10cc.jpeg" VerticalOptions="Fill" HeightRequest="200" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="BIENVENIDO AL SISTEMA DE ALQUILER DE VEHICULOS" FontSize="Title"/>
+                <Label Text="Seleccione alguna de las opciones:" Padding="0,0,0,0"/>
+                <Label FontSize="16" Padding="0,24,0,0">
+                
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button x:Name="btnOp1" Text="REGISTRAR ALQUILER VEHICULO" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnOp1_Clicked" CornerRadius="5"></Button>
+                <Button x:Name="btnOp2" Text="REGISTRAR MANTENIMIENTO VEHICULOS" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnOp2_Clicked" CornerRadius="5"></Button>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

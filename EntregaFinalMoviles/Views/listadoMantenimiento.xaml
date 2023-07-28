@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appMoviles_Sabado.Views.listadoMantenimiento">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="LISTADO DE VEHICULOS EN MANTENIMIENTO"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" TextColor="Green" FontSize="Medium" FontAttributes="Bold" BackgroundColor="LightGray" />
+            <Grid Padding="0" RowSpacing="0" HeightRequest="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Placa" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="1" Text="Fecha" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="2" Text="Tipo mantenimiento" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="3" Text="Estado" FontSize="10" FontAttributes="Bold"></Label>
+            </Grid>
+            <CollectionView x:Name="lstMant">
+                <CollectionView.ItemsLayout >
+                    <LinearItemsLayout Orientation="Vertical"></LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="0" RowSpacing="0" HeightRequest="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding Placa}" FontSize="10" />
+                            <Label Grid.Column="1" Text="{Binding Fecha}" FontSize="10" />
+                            <Label Grid.Column="2" Text="{Binding Tipo}" FontSize="10" />
+                            <Label Grid.Column="3" Text="{Binding Estado}" FontSize="10" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

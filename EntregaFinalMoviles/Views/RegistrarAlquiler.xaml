@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appMoviles_Sabado.Views.IngresarVehiculo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="REGISTRAR ALQUILER VEHICULO"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" TextColor="Green" FontSize="Medium" FontAttributes="Bold" BackgroundColor="LightGray" />
+            <Grid ColumnDefinitions="*,*" VerticalOptions="Start">
+                <Entry x:Name="txtPlaca" Placeholder="Placa" Keyboard="Text" ></Entry>
+                <Entry Grid.Column="1" x:Name="txtMarca" Placeholder="Marca del vehiculo" Keyboard="Text"></Entry>
+            </Grid>
+            <Grid ColumnDefinitions="*,*" VerticalOptions="Start">
+                <Entry x:Name="txtModelo" Placeholder="Modelo" Keyboard="Text"></Entry>
+                <Entry Grid.Column="1" x:Name="txtDocumento" Placeholder="Documento Cliente" Keyboard="Numeric"></Entry>
+            </Grid>
+            <Grid ColumnDefinitions="*,*" VerticalOptions="Start">
+                <Entry x:Name="txtNombreProp" Placeholder="Nombre Cliente" Keyboard="Text" ></Entry>
+                <Entry Grid.Column="1" x:Name="txtDescripcion" Placeholder="Dias de alquiler" Keyboard="Numeric"></Entry>
+            </Grid>
+            <Grid ColumnDefinitions="*,*" VerticalOptions="Start">
+                <Entry x:Name="txtFecha" Placeholder="dd/mm/aaaa" Keyboard="Text" ></Entry>
+                <Entry Grid.Column="1" x:Name="txtContacto" Placeholder="Telefono Cliente" Keyboard="Numeric"></Entry>
+            </Grid>
+            <Picker x:Name="txtTipo" Title="Seleccione tipo de vehiculo">
+            </Picker>
+            <Grid ColumnDefinitions="*" VerticalOptions="Start">
+                <Entry Grid.Column="0" x:Name="txtValor" Placeholder="Valor a pagar" Keyboard="Numeric" IsEnabled="False"></Entry>
+            </Grid>
+            <Grid ColumnDefinitions="*, *" VerticalOptions="Start">
+                <Button x:Name="btnGuardar" Text="GUARDAR" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnGuardar_Clicked" CornerRadius="5"></Button>
+                <Button Grid.Column="1" x:Name="btnActualizar" Text="ACTUALIZAR" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnActualizar_Clicked" CornerRadius="5"></Button>
+            </Grid>
+            <Grid ColumnDefinitions="*, *" VerticalOptions="Start">
+                <Button x:Name="btnEliminar" Text="ELIMINAR" TextTransform="Uppercase" BackgroundColor="Red" FontAttributes="Bold" Clicked="btnEliminar_Clicked" CornerRadius="5"></Button>
+                <Button Grid.Column="1" x:Name="btnLimpiar" Text="LIMPIAR" TextTransform="Uppercase" BackgroundColor="Red" FontAttributes="Bold" Clicked="btnLimpiar_Clicked" CornerRadius="5"></Button>
+            </Grid>
+            <Grid ColumnDefinitions="*" VerticalOptions="Start">
+                <Button x:Name="btnTodos" Text="VER REGISTROS" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnTodos_Clicked" CornerRadius="5"></Button>
+                <Button Grid.Column="1" x:Name="btnConsultar" Text="CONSULTAR" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnConsultar_Clicked" CornerRadius="5"></Button>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

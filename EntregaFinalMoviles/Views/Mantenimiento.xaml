@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appMoviles_Sabado.Views.Mantenimiento">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="REGISTRAR MANTENIMIENTO VEHICULOS"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" TextColor="Green" FontSize="Medium" FontAttributes="Bold" BackgroundColor="LightGray" />
+
+                <Entry x:Name="txtPlaca" Placeholder="Placa vehiculo" Keyboard="Text"></Entry>
+                <Entry x:Name="txtFecha" Placeholder="Fecha dd/mm/aaaa" Keyboard="Text" ></Entry>
+
+            <Picker x:Name="txtMan" Title="Seleccione tipo de mantenimiento">
+            </Picker>
+            <Picker  x:Name="txtEstado" Title="Seleccione estado">
+            </Picker>
+            <Grid ColumnDefinitions="*, *" VerticalOptions="Start">
+                <Button x:Name="btnGuardar" Text="GUARDAR" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnGuardar_Clicked" CornerRadius="5"></Button>
+                <Button Grid.Column="1" x:Name="btnActualizar" Text="ACTUALIZAR" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnActualizar_Clicked" CornerRadius="5"></Button>
+            </Grid>
+            <Grid ColumnDefinitions="*, *" VerticalOptions="Start">
+                <Button x:Name="btnEliminar" Text="ELIMINAR" TextTransform="Uppercase" BackgroundColor="Red" FontAttributes="Bold" Clicked="btnEliminar_Clicked" CornerRadius="5"></Button>
+                <Button Grid.Column="1" x:Name="btnLimpiar" Text="LIMPIAR" TextTransform="Uppercase" BackgroundColor="Red" FontAttributes="Bold" Clicked="btnLimpiar_Clicked" CornerRadius="5"></Button>
+            </Grid>
+            <Grid ColumnDefinitions="*" VerticalOptions="Start">
+                <Button x:Name="btnTodos" Text="VER REGISTROS" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnTodos_Clicked" CornerRadius="5"></Button>
+                <Button Grid.Column="1" x:Name="btnConsultar" Text="CONSULTAR" TextTransform="Uppercase" BackgroundColor="Green" FontAttributes="Bold" Clicked="btnConsultar_Clicked" CornerRadius="5"></Button>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

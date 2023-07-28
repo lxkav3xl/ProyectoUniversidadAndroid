@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appMoviles_Sabado.Views.listadoAutos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="LISTADO DE VEHICULOS ALQUILADOS"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" TextColor="Green" FontSize="Medium" FontAttributes="Bold" BackgroundColor="LightGray" />
+            <Grid Padding="0" RowSpacing="0" HeightRequest="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="55" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="55" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Placa" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="1" Text="Marca" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="2" Text="Modelo" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="3" Text="Nombre Cliente" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="4" Text="Documento" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="5" Text="Dias Alquiler" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="6"  Text="Fecha" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="7"  Text="Telefono" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="8"  Text="Tipo Vehiculo" FontSize="10" FontAttributes="Bold"></Label>
+                <Label Grid.Column="9"  Text="Valor a pagar" FontSize="10" FontAttributes="Bold"></Label>
+            </Grid>
+            <CollectionView x:Name="lstVehiculos">
+                <CollectionView.ItemsLayout >
+                    <LinearItemsLayout Orientation="Vertical"></LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="0" RowSpacing="0" HeightRequest="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="35" />
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="35" />
+                                <ColumnDefinition Width="55" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="35" />
+                                <ColumnDefinition Width="55" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding Placa}" FontSize="10" />
+                            <Label Grid.Column="1" Text="{Binding Marca}" FontSize="10" />
+                            <Label Grid.Column="2" Text="{Binding Modelo}" FontSize="10" />
+                            <Label Grid.Column="3" Text="{Binding NombreProp}" FontSize="10" />
+                            <Label Grid.Column="4" Text="{Binding Documento}" FontSize="10" />
+                            <Label Grid.Column="5" Text="{Binding Descripcion}" FontSize="10" />
+                            <Label Grid.Column="6" Text="{Binding Fecha}" FontSize="10" />
+                            <Label Grid.Column="7" Text="{Binding Contacto}" FontSize="10" />
+                            <Label Grid.Column="8" Text="{Binding Tipo}" FontSize="10" />
+                            <Label Grid.Column="9" Text="{Binding ValorPagar}" FontSize="10" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
